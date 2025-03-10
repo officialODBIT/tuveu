@@ -14,19 +14,22 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      overflow: hidden;
     }
 
     .video-container {
       background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       padding: 20px;
       text-align: center;
+      border-radius: 10px;
     }
 
     video {
-      width: 100%;
-      max-width: 600px;
+      width: 800px; /* Increased size */
+      max-width: 100%;
       border: 2px solid #ccc;
+      border-radius: 10px;
     }
 
     .controls {
@@ -34,17 +37,22 @@
     }
 
     button {
-      padding: 10px 20px;
+      padding: 12px 20px;
       background-color: #007bff;
       color: #fff;
       border: none;
       cursor: pointer;
       margin: 5px;
       border-radius: 5px;
+      font-size: 16px;
     }
 
     button:hover {
       background-color: #0056b3;
+    }
+
+    .control-icon {
+      margin-right: 8px;
     }
   </style>
 </head>
@@ -56,9 +64,15 @@
       Your browser does not support the video tag.
     </video>
     <div class="controls">
-      <button onclick="playVideo()">Play</button>
-      <button onclick="pauseVideo()">Pause</button>
-      <button onclick="stopVideo()">Stop</button>
+      <button onclick="playVideo()">
+        <span class="control-icon">▶</span> Play
+      </button>
+      <button onclick="pauseVideo()">
+        <span class="control-icon">⏸</span> Pause
+      </button>
+      <button onclick="stopVideo()">
+        <span class="control-icon">⏹</span> Stop
+      </button>
     </div>
   </div>
 
