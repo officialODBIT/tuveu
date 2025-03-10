@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .video-list {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 10px;
+      background-color: #f9f9f9;
+      margin: 10px 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    li:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-list">
+    <h1>Video List</h1>
+    <ul id="videos">
+      <li onclick="goToVideo('https://www.example.com/video1')">Video 1</li>
+      <li onclick="goToVideo('https://www.example.com/video2')">Video 2</li>
+      <li onclick="goToVideo('https://www.example.com/video3')">Video 3</li>
+      <li onclick="goToVideo('https://www.example.com/video4')">Video 4</li>
+    </ul>
+  </div>
+
+  <script>
+    function goToVideo(url) {
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
